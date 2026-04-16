@@ -1,6 +1,7 @@
 function insert_Row() {
-    //Writ
+
     const table = document.getElementById("sampleTable")
+    const tbody = table.getElementsByTagName("tbody")[0]
 
     const newRow = document.createElement("tr")
 
@@ -13,8 +14,6 @@ function insert_Row() {
     newRow.appendChild(cell1)
     newRow.appendChild(cell2)
 
-    // ✅ correct way to insert at top
-    table.insertBefore(newRow, table.rows[0])
-  
-  
+    // ✅ insert at top inside tbody
+    tbody.insertBefore(newRow, tbody.rows[0])
 }
